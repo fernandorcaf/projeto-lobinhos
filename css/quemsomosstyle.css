@@ -1,0 +1,19 @@
+#about-us-first-section{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 2em;
+    text-align: center;
+}
+#about-us-first-section h1{
+    font-size: 50px;
+    color: #333333;
+}
+
+#about-us-first-section p{
+    font-size: 20px;
+    width: 60%;
+    margin: 2em 0em 2em 0em;
+}
+

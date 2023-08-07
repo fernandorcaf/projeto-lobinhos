@@ -1,0 +1,341 @@
+/* nesse código quando aumento o font-size do texto contido na #first-section, a background-image aumenta também, como posso fazer para aumentar a fonte e não aumentar o background-image juntamente?*/
+
+*{
+    padding:0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+h1{
+    color: #DEB959;
+    font-size: 2.5em;
+    font-weight: 700;
+}
+h2{
+    font-size: 1.5em;
+    font-weight: 600;
+}
+
+p{
+    font-size: 1.1em;
+    font-weight: 400;
+}
+
+body{
+    font-family: 'Darker Grotesque', sans-serif;
+}
+
+a{
+    text-decoration: none;
+    color: #333333;
+}
+
+html, body {
+    height: 100%;
+    margin: 0;
+}
+  
+.container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
+}
+
+main {
+  flex-grow: 1;
+}
+
+/* begin of header section */
+
+header{
+    background-color: #85CDF5;
+    display: flex;
+    justify-content:space-around;
+    align-items: center;
+    padding: 0.5em;
+}
+
+header h2{
+    color:#333333;
+    padding: 0em 0em 0.5em 0em;
+    position: relative;
+    text-align: center;
+}
+header h2::after{
+    content: " ";
+    width: 0%;
+    height: 0.1em;
+    background-color: #333333;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    transition: 0.5s;
+}
+
+header h2:hover::after{
+    width: 100%;
+}
+
+#nossos-lobinhos-text::after{
+    left: 0;
+}
+
+/* end of header section */
+
+/* begin of first section */
+
+#first-section{
+    background-image: url("../assets/image.png");
+    background-size:cover;
+    background-position: center;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 33.75em;
+    width: 100%;
+    background-color: black;
+}
+
+#first-section h1{
+    font-size: 6em;
+    font-weight: 700;
+    color: white;
+    position: relative;
+    padding-bottom: 0.1em;
+}
+
+#first-section h1::after{
+    content: " ";
+    width: 0%;
+    height: 0.05em;
+    background: currentColor;
+    display: block;
+    margin: 0 auto;
+    transition: 0.5s;
+}
+
+#first-section h1:hover::after{
+    width: 40%;
+}
+
+
+#first-section p{
+    font-size: 2em;
+    font-weight: 400;
+}
+#first-section-text{
+    width: 60%;
+    text-align: center;
+}
+
+@media (max-width: 800px) {
+    #first-section h1{
+        font-size: 4em;
+    }
+    #first-section p{
+        font-size: 1.5em;
+    }
+}
+
+/* -----------end of FIRST section----------*/
+
+/* -----------begin of ABOUT section----------*/
+
+#about-section{
+    background-color: #2C5680;
+    padding: 2em;
+}
+
+#about-section-text{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#about-section-text p{
+    color: white;
+    text-align: center;
+    width: 60%;
+    font-size: 1.25em;
+    margin: 1em 0em 1em 0em;
+    line-height: 1.5em;
+}
+
+/* -----------end of ABOUT section----------*/
+
+/* -----------begin of VALUES section----------*/
+
+#values-section{
+    background-color:#333333;
+    display: flex;
+    flex-direction: column;
+    padding: 2em 3em 3em 3em;
+    color: white;
+    justify-content: center;
+    align-items: center;
+    gap: 2em;
+}
+#values-row{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex-wrap: wrap;
+    gap: 1em;
+}
+.values-column{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 12em;
+    gap: 1em;
+}
+.div-img{
+    width: 7.8125em;
+    height: auto;
+    background-color: white;
+    padding: 1.5em;
+    border-radius: 50%;
+}
+.div-img img{
+    width: 100%;
+    height: auto;
+}
+/*------------end of VALUES section-----------*/
+
+/* -----------begin of WOLVES section----------*/
+
+#wolves-section{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 2em;
+}
+
+.wolves-row{
+    display: flex;
+    justify-content:center;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    width: 70%;
+    gap: 4em;
+    padding: 4em;
+}
+
+.wolf-img-div{
+    width: 23em;
+    height: 15em;
+}
+
+.wolf-img-div img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+.wolves-text{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 0.2em;
+    width: 23em;
+
+}
+
+.wolves-text p{
+    margin-top: 1em;
+    font-size: 1.0625em;
+    line-height: 1em;
+}
+
+#wolves-row-reverse{
+    flex-direction: row-reverse;
+}
+
+#wolves-row-reverse p, #wolves-row-reverse h2, #wolves-row-reverse span{
+    width: 100%;
+    text-align: right;
+}
+
+#wolf-img-shadow{
+    box-shadow: -1.5625em -1.5625em #2C5680, -1.25em -1.875em #333, -1.875em -1.25em #333, -1.875em -1.875em #333;
+}
+#wolf-reverse-img-shadow{
+    box-shadow: 1.5625em -1.5625em #2C5680, 1.25em -1.875em #333, 1.875em -1.25em #333, 1.875em -1.875em #333;
+}
+
+/* -----------end of WOLVES section-----------*/
+
+/* -----------begin of FOOTER section----------*/
+
+footer{
+    background-color: #333333;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 2em;
+    color:white;
+    flex-wrap: wrap;
+    gap: 1em;
+    flex-shrink: 0;
+}
+
+#first-second-col-footer{
+    display: flex;
+    flex-wrap: wrap;
+    width: 40em;
+    gap: 1em;
+}
+
+
+#contacts-div{
+    display: flex;
+    flex-direction: column;
+    width: 20em;
+    justify-content: space-between;
+}
+
+.contacts-row{
+    display: flex;
+    gap: 1em;
+    justify-content: flex-start;
+    align-items: center;
+    height: 2.5em;
+    font-size: 0.8em;
+}
+
+.contacts-row img {
+    width: 1em;
+    height: auto;
+}
+
+#meet-us-btn{
+    color: #333333;
+    background-color: #DEB959;
+    display: flex;
+    justify-content: center;
+    width: 6em;
+    font-size: 1.5em;
+    font-weight: bold; 
+}
+
+#footer-gradient-div{
+    background: linear-gradient(270deg, #2C5680 0%, #DEB959 100%);
+    height: 0.3em;
+}
+
+#developed-by-div{
+    display: flex;
+    flex-direction: column;
+    gap: 0.5em;
+}
+
+
+/* -----------end of FOOTER section-----------*/
